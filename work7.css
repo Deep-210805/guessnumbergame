@@ -7,6 +7,7 @@
         background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
         border:#9599E2 4px;
 width:fit-content;
+       height:fit-content;
           }
           .heading{
             font-size: 65px;

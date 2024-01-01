@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number</title>
+    <link rel="shortcut icon" href="man.png" type="image/x-icon">
+    <link rel="stylesheet" href="work7.css">
+</head>
+<style>
+.para{
+    color:black;
+    font-size: 25px;
+    min-height: 10px;
+}
+.guess2{
+    font-size: 30px;
+    font-weight: 450px;
+    margin-left: 90px;
+}
+#deep{font-size:50px;
+    font-weight:450px;
+    text-align: center;
+    margin-top: 120px;
+}
+.guessSubmit{
+    font-size: 20px;
+    color: blue;
+} .guessField{
+    height: 23px;
+    width: 80px;
+    color: brown;
+    font-size:20px;
+    font-weight: 500px;
+
+    }
+</style>
+
+
+<body>
+    <div class="container">
+        <nav class="navigation">
+<ul class="items">
+    <li><p class="heading">Deep Games</p></li>
+    <li class="item">
+        <div><a href="#">Home</a></div>
+        <div><a href="tel:8708425219">Contact Us</a></div>
+        <div><a href="#">About</a></div>
+    </li>
+</ul>
+</nav>
+<div class="box">
+<div class="main">
+<section class="leftbox">
+    <div class="container">
+        <h1 id="deep">Guess The Number</h1>
+        <p class="para">
+            We have selected a random number 
+            between 1 - 10. See if you can
+            guess it.
+        </p>
+ <br> <br> <br> 
+        <div class="form">
+            <label for="guessField" class="guess2">
+                Enter a guess: 
+            </label>
+            
+            <input type="text" id="guessField"
+                class="guessField">
+            
+            <input type="submit" value="Submit guess"
+                class="guessSubmit" id="submitguess">
+        </div>
+    </div>
+</section></div>
+
+</div>
+<footer id="footer">
+    <p> Copyright &#x24B8;Deepgames Pvt.Ltd 2023 All Rights Reserved </p>
+</footer>
+    </div>
+    <script type="text/javascript">
+
+		// Generate a Random Number
+		let y = Math.floor(Math.random()*10+1 );
+
+		// Counting the number of guesses
+		// made for correct Guess
+		let guess = 1;
+
+		document.getElementById("submitguess").onclick = function () {
+
+			// Number guessed by user 
+			let x = document.getElementById("guessField").value;
+
+			if (x == y) {
+				alert("CONGRATULATIONS!!! YOU GUESSED IT RIGHT IN "
+					+ guess + " GUESS ");
+			}
+
+			/* If guessed number is greater than actual number*/
+			else if (x > y) {
+				guess++;
+				alert("OOPS SORRY!! TRY A SMALLER NUMBER");
+			}
+			else {
+				guess++;
+				alert("OOPS SORRY!! TRY A GREATER NUMBER")
+			}
+		}
+	</script>
+</body>
+</html>
